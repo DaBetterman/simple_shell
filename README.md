@@ -84,10 +84,10 @@ _=./hsh
 7. **Cancel running program:** By pressing `ctrl + c` you will stop the current running program and start on a new line.
 ```
 😃:~$ ^C
-🤭:~$ ^C
-🤭:~$ ^C
-🤭:~$ ^C
-🤭:~$ 
+😟:~$ ^C
+😟:~$ ^C
+😟:~$ ^C
+😟:~$ 
 😃:~$ 
 ```
 
@@ -97,7 +97,7 @@ _=./hsh
 ## Notes
 - The shell supports basic commands like `ls`, `echo`, `printenv` and `env`.
 - You can list files with detailed information using `ls -la`.
-- Environment variables like `$USER` are not expanded when echoed.
+- There are more commands that can be executed, try it out and see...
 
 Feel free to explore and use this simple shell for your command-line needs! If you have any questions, refer to the code or feel free to reach out. Happy coding!
 

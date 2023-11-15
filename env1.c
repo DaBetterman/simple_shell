@@ -33,7 +33,7 @@ int cmp_env_name(const char *nenv, const char *name)
  * @name: name of the environment variable
  * @_environ: environment variable
  *
- * Return: value of the environment variable if it is found.
+ * Return: value of the environment variable if is found.
  * In other case, returns NULL.
  */
 char *_getenv(const char *name, char **_environ)
@@ -58,4 +58,37 @@ char *_getenv(const char *name, char **_environ)
 	}
 
 	return (ptr_env + mov);
+}
+
+/**
+ * _env - prints the evironment variables
+ *
+ * @database: data relevant.
+ * Return: 1 on success.
+ */
+int _env(data *database)
+{
+	int i, j;
+
+	/*Iterate through the array of environment variables*/
+	for (i = 0; database->_environ[i]; i++)
+	{
+		/*Calculate the length of the current environment variable*/
+		for (j = 0; database->_environ[i][j]; j++)
+		{
+
+		}
+
+		/*Write the environment variable to the standard output*/
+		write(STDOUT_FILENO, database->_environ[i], j);
+
+		/*Write a newline character to separate variables*/
+		write(STDOUT_FILENO, "\n", 1);
+	}
+
+	/*Set the shell's status to 0 to indicate success*/
+	database->status = 0;
+
+	/*Return 1 to indicate success*/
+	return (1);
 }
